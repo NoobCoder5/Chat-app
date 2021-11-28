@@ -1,8 +1,13 @@
-import Reducer from './Reducer';
+import {Reducer,Reducer_two,Reducer_third} from './Reducer';
+
+
 import {combineReducers} from 'redux'
 
 const allReducers = combineReducers({
-    user:Reducer
+    array:Reducer,
+    container:Reducer_two,
+    check:Reducer_third
+   
 })
 
 export default allReducers

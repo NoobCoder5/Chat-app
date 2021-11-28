@@ -1,0 +1,7 @@
+.green{
+    background-color:greenyellow
+}
+.blue{
+    --tw-bg-opacity: 1;
+    background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
+}
