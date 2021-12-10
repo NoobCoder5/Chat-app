@@ -11,7 +11,7 @@ const Bars = () => {
         {
          array ? 
          array.map((e,index) => {
-          return <div id={`a${index}`} style={{height:`${e * 2}px` }} className=" blue transition-all flex-grow text-center mx-1 h-72 w-4"></div>
+          return <div id={`a${index}`} style={{height:`${e * 2}px` }} className=" blue transition-all flex-grow text-center ml-1 h-72 w-4"></div>
         })
         :
         ""

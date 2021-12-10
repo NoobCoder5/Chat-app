@@ -2,7 +2,7 @@ async function BubbleSort(array, keyword, data, delay, container, nav) {
   nav.classList.toggle("pointer-events-none");
   const p = nav.querySelectorAll("p");
   const button = nav.querySelectorAll("button");
-  
+ 
   for (let x = 0; x < 2; x++) {
     const ele = p[x];
     ele.classList.toggle("text-white");
@@ -35,13 +35,13 @@ async function BubbleSort(array, keyword, data, delay, container, nav) {
         const newarr = [...arr];
         keyword(data(newarr));
         await new Promise((resolve) =>
-          setTimeout(() => {
-            resolve();
-            first.classList.toggle("green");
-            second.classList.toggle("green");
-            first.classList.toggle("blue");
-            second.classList.toggle("blue");
-          }, delay * 10)
+        setTimeout(() => {
+          resolve();
+          first.classList.toggle("green");
+          second.classList.toggle("green");
+          first.classList.toggle("blue");
+          second.classList.toggle("blue");
+        }, delay * 10)
         );
       }
     }
