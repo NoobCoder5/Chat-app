@@ -34,7 +34,7 @@ const Navbar = () => {
       >
         <div>
           <p className="red" className="text-white text-center text-bold">
-            Set Array Size
+            Set ArraySize
           </p>
           <input
             min="5"
