@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Bars from "./components/Bars";
-import { Container } from "./Action";
-import { Element } from "./Action";
-
+import React from "react";
 import "./index.css";
-import { useDispatch } from "react-redux";
+import Chat from "./components/Chat";
+import Top from "./components/Top";
+
 const App = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const container = document.querySelector("#bars");
-
-    const nav = document.querySelector("#Nav");
-    dispatch(Container(container));
-
-    dispatch(Element(nav));
-  }, []);
   return (
     <>
-      <Navbar />
-      <Bars />
+      <div className="bg-gray-800 w-screen text-white h-screen">
+        <Top />
+        <Chat />
+      </div>
     </>
   );
 };
