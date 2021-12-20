@@ -1,15 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import "./index.css";
-import Chat from "./components/Chat";
-import Top from "./components/Top";
-
+import Chat from "./components/Chat"
+import Top from "./components/Top"
+import SignUp from "./components/SignUp"
 const App = () => {
+  const [user, setuser] = useState(false)
   return (
     <>
-      <div className="bg-gray-800 w-screen text-white h-screen">
-        <Top />
-        <Chat />
+      {
+        user ? 
+        <div className="bg-gray-800  text-white w-screen h-screen">
+        
+       <Top/>
+       <Chat/>
+
       </div>
+
+      :
+      <SignUp/>
+      }
     </>
   );
 };

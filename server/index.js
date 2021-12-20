@@ -1,30 +1,18 @@
 const express = require('express');
 const app = express();
-
-const io = require("socket.io")(8000,{cors:{
-    origin:["http://localhost:3000"]
-}});
-
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+const db = require('./Firestore.js')
 app.get('/', (req, res) => {
-  res.send('<h1>Hello world</h1>');
+  res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', (socket) => {
-     
-    socket.on("message",(data) => {
-       io.emit("data",data);
-    })
-    socket.on("join", () => {
-      socket.join("first")
-    })
-    socket.on("room", (data) => {
-       socket.to("first").emit("take",data);
-    })
-    
+  console.log('a user connected');
 });
 
-  
-
-app.listen(5000, () => {
+server.listen(3000, () => {
   console.log('listening on *:3000');
 });
