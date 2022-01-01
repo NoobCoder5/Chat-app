@@ -47,6 +47,10 @@ const Chat = () => {
         obj[object.name] = newobj;
         const newarr = [obj1, obj2, obj3, obj];
         localStorage.setItem(user, JSON.stringify(newarr));
+      } else {
+        obj[object.name] = [sended_message];
+        const newarr = [obj1, obj2, obj3, obj];
+        localStorage.setItem(user, JSON.stringify(newarr));
       }
     } else {
       obj[object.name] = [sended_message];
@@ -65,6 +69,7 @@ const Chat = () => {
   }
   useEffect(() => {
     socket.on("receive", (data) => {
+      console.log("received");
       const array = JSON.parse(localStorage.getItem(user));
       const obj1 = array[0];
       const obj2 = array[1];
@@ -73,12 +78,19 @@ const Chat = () => {
 
       if (array[3]) {
         const obj = { ...array[3] };
+        console.log("befrore");
 
         if (obj[data.sender]) {
           console.log("true");
           const x = obj[data.sender];
           const newobj = [...x, data];
           obj[data.sender] = newobj;
+
+          const newarr = [obj1, obj2, obj3, obj];
+          localStorage.setItem(user, JSON.stringify(newarr));
+        } else {
+          console.log("False");
+          obj[data.sender] = [data];
 
           const newarr = [obj1, obj2, obj3, obj];
           localStorage.setItem(user, JSON.stringify(newarr));
@@ -92,7 +104,6 @@ const Chat = () => {
       }
       populate(data.sender);
     });
-    
   }, [user]);
   return (
     <>
