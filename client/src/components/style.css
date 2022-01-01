@@ -10,3 +10,7 @@
 .img {
   background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed413db0-91e7-4cd6-adcf-1d7735d97833/ddr7w3m-e09224bf-26c6-45dc-b10c-3357e7968176.png/v1/fill/w_1280,h_720,q_80,strp/flat_art_kid_goku_nimbus__1__desktop_wallpaper__8k_by_davidmaxsteinbach_ddr7w3m-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvZWQ0MTNkYjAtOTFlNy00Y2Q2LWFkY2YtMWQ3NzM1ZDk3ODMzXC9kZHI3dzNtLWUwOTIyNGJmLTI2YzYtNDVkYy1iMTBjLTMzNTdlNzk2ODE3Ni5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.j_BqJFpGYQxH9IYD5tE541qiJhZtHf6kJWIICinwAqc");
 }
+form > input:focus {
+  /* removing the input focus blue box. Put this on the form if you like. */
+  outline: none;
+}

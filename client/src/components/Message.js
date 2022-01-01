@@ -3,24 +3,21 @@ import React from 'react'
 const Message = (props) => {
     return (
         <>
-            <div class={`group flex  m-2 ${props.position} `}>
+            <div class={`group flex  m-2 ${props.sender == "me" ? "justify-start" : "justify-end" } `}>
             <img
               class="shrink-0  h-12 w-12 rounded-full"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRowos5MZ39GXVJWBqN2-CMvuR3UPoxDbhoRCeeUP18VtTCVkizW3RsF-uTYA6Qk29xF3Q&usqp=CAU"
               alt=""
             />
             <div class="px-2  max-w-xs">
-              <p class="text-sm font-medium  text-gray-700 group-hover:text-gray-900">
-                jeloosdf
+              <p class="text-sm font-medium  text-white ">
+                {props.sender}
               </p>
-              <p class="text-sm font-medium text-gray-500 group-hover:text-gray-700">
-                dfjsocooc
+              <p class="text-sm font-medium text-gray-500 ">
+                
               </p>
               <div className="border-solid m-1 border max-w-xs p-2 rounded-lg border-gray-700">
-                  jsdkfjk djkfjsd  jdksfjsdkfld fds kfdsjfl
-                  jsdkfjk djkfjsd  jdksfjsdkfld fds kfdsjfl
-                  jsdkfjk djkfjsd  jdksfjsdkfld fds kfdsjfl
-
+                {props.message}
               </div>
             </div>
           </div> 
